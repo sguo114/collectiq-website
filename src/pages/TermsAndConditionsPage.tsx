@@ -1,5 +1,4 @@
 // src/pages/TermsAndConditionsPage.tsx
-import React from "react";
 
 interface TermsAndConditionsPageProps {
   setCurrentPage: (page: "home" | "privacy" | "terms") => void;
