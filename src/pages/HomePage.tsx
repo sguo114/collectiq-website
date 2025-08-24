@@ -1,5 +1,4 @@
 // src/pages/HomePage.tsx
-import React from "react";
 
 // IMPORTANT: Replace these with the actual paths to your images in the public/images folder
 // For example: "/images/profile-page.jpg"
@@ -9,19 +8,21 @@ const screenshots = [
   "/images/collection-page.jpg", // Placeholder for collection-page.jpg
 ];
 
-interface HomePageProps {
-  setCurrentPage: (page: "home" | "privacy" | "terms") => void;
-}
+// Interface for props (keeping it in case you want to pass setCurrentPage back in the future)
+// interface HomePageProps {
+//   setCurrentPage?: (page: "home" | "privacy" | "terms") => void; // Made optional
+// }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function HomePage({ setCurrentPage }: HomePageProps) {
+function HomePage() {
   return (
     <main className="main-content">
       <header className="hero-section">
-        <h1 className="hero-title">Collectiq: Your Ultimate Collection Tracker</h1>
+        {/* Logo Integration */}
+        <img src="/images/logo.png" alt="Collectiq Logo" className="hero-logo" />
+        <h1 className="hero-title">Collectiq: An App to Manage & Track Your Collections</h1>
         <p className="hero-tagline">Effortlessly manage, explore, and share your passion for collecting.</p>
         <div className="hero-buttons">
-          <a
+          {/* <a
             href="https://apps.apple.com/us/app/collectiq/idYOURAPPID" // TODO: Replace with actual App Store link
             target="_blank"
             rel="noopener noreferrer"
@@ -36,7 +37,7 @@ function HomePage({ setCurrentPage }: HomePageProps) {
             className="hero-button secondary"
           >
             Get it on Google Play
-          </a>
+          </a> */}
         </div>
       </header>
 
@@ -59,7 +60,8 @@ function HomePage({ setCurrentPage }: HomePageProps) {
         <div className="screenshots-grid">
           {screenshots.map((src, index) => (
             <div key={index} className="screenshot-card">
-              <img src={src} alt={`Collectiq Screenshot ${index + 1}`} className="w-full h-auto object-cover" />
+              <img src={src} alt={`Collectiq Screenshot ${index + 1}`} />{" "}
+              {/* Removed w-full h-auto object-cover from here, adding in CSS */}
               <p className="screenshot-card-caption">
                 {index === 0
                   ? "Your Personalized Profile"
