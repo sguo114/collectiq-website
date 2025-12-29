@@ -60,9 +60,7 @@ function TermsAndConditionsPage() {
           <li>
             <strong>Public vs. Private Collections:</strong> You can designate your collections as "public" or
             "private." Public collections and their associated items will be visible to all other App users. Private
-            collections and their items will only be visible to you. User Item data (personal notes, purchase price, and
-            specific photos you upload for your owned items) is always private to you, even if the general item or
-            collection is public.
+            collections and their items will only be visible to you.
           </li>
           <li>
             <strong>License to Collectiq:</strong> By making your User Content available on or through the App
