@@ -1,15 +1,12 @@
 // src/pages/TermsAndConditionsPage.tsx
+import { Link } from "react-router-dom";
 
-interface TermsAndConditionsPageProps {
-  setCurrentPage: (page: "home" | "privacy" | "terms") => void;
-}
-
-function TermsAndConditionsPage({ setCurrentPage }: TermsAndConditionsPageProps) {
+function TermsAndConditionsPage() {
   return (
     <div className="main-content legal-content">
-      <button onClick={() => setCurrentPage("home")} className="back-button">
+      <Link to="/" className="back-button" style={{ textDecoration: "none", display: "inline-block" }}>
         &larr; Back to Home
-      </button>
+      </Link>
       <h1 className="section-title text-center">Terms and Conditions for Collectiq</h1>
       <section className="section">
         <p className="text-base mb-4">

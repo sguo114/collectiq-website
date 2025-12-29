@@ -1,16 +1,12 @@
 // src/pages/PrivacyPolicyPage.tsx
+import { Link } from "react-router-dom";
 
-interface PrivacyPolicyPageProps {
-  setCurrentPage: (page: "home" | "privacy" | "terms") => void;
-}
-
-function PrivacyPolicyPage({ setCurrentPage }: PrivacyPolicyPageProps) {
+function PrivacyPolicyPage() {
   return (
     <div className="main-content legal-content">
-      <button onClick={() => setCurrentPage("home")} className="back-button">
-        {/* Using a simple text arrow, replace with actual icon if you have one compatible with web */}
+      <Link to="/" className="back-button" style={{ textDecoration: "none", display: "inline-block" }}>
         &larr; Back to Home
-      </button>
+      </Link>
       <h1 className="section-title text-center">Privacy Policy for Collectiq</h1>
       <section className="section">
         <p className="text-base mb-4">
